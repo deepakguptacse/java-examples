@@ -9,7 +9,7 @@ import com.google.inject.name.Names;
 
 import java.util.Scanner;
 
-public class GuiceRuntimeDependencyModule extends AbstractModule {
+public class ExampleModule extends AbstractModule {
 
     protected void configure() {
         bind(ExampleDao.class).annotatedWith(Names.named("sql")).to(SqlDao.class).in(Scopes.SINGLETON);

@@ -11,7 +11,7 @@ public class Driver {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        Injector injector = Guice.createInjector(new GuiceRuntimeDependencyModule());
+        Injector injector = Guice.createInjector(new ExampleModule());
         ExampleDao dao = injector.getInstance(Key.get(ExampleDao.class, Names.named(sc.next())));
         System.out.println(dao.getData());
     }
